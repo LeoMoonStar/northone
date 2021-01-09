@@ -1,10 +1,5 @@
-var fs = require('fs'),
-    AWS = require("aws-sdk");
-
-AWS.config.update({accessKeyId: 'AKIAIOSFODNN7EXAMPLE',
-                           secretAccessKey: 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY',
-                           region: 'us-west-2',
-                           endpoint: 'http://localhost:8000'});
+var fs = require('fs');
+var {AWS} = require('../src/config/aws')
 
 var dynamodb = new AWS.DynamoDB();
 var docClient = new AWS.DynamoDB.DocumentClient();
