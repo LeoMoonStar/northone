@@ -21,9 +21,9 @@ app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
 
-app.use('/population', populationRouter.getPopulations());
-app.use('/booksdata', authorRouter.getAuthors());
-app.use('/authors', authorRouter.getAuthors());
+app.use('/population', populationRouter);
+
+app.use('/authors', authorRouter);
 
 app.get('/', function (req, res) {
     res.render('index', {
@@ -31,25 +31,6 @@ app.get('/', function (req, res) {
     });
 });
 
-app.get('/books', function (req, res) {
-    res.render('books', {
-        title: 'authors Chart'
-    });
-});
-
-app.get('/tsv', function (req, res) {
-
-    res.render('authors', {
-        title: 'authors Chart'
-    });
-});
-
-app.get('/linechart', function (req, res) {
-
-    res.render('linechart', {
-        title: 'authors Chart'
-    });
-})
 
 app.listen(port, function () {
     console.log('running server on port ' + port) 

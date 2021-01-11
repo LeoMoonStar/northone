@@ -5,13 +5,15 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./sampledata/seedAuthors.js && node ./sampledata/seedPopulations.js && node app.js"
+    "start": "node app.js"
   },
   "author": "Josiah Solomon",
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.824.0",
     "cors": "^2.7.1",
+    "dotenv": "^8.2.0",
+    "dynamoose": "^2.5.0",
     "ejs": "^2.4.1",
     "express": "^4.17.1"
   },

@@ -1,5 +1,13 @@
 var AWS = require('aws-sdk');
-AWS.config.loadFromPath('./awsconfig.json')
+var path = require('path')
+var configFilePath = path.join(__dirname, '/awsconfig.json')
+AWS.config.loadFromPath(configFilePath)
+
+var dynamodb = new AWS.DynamoDB();
+var docClient = new AWS.DynamoDB.DocumentClient()
+
 module.exports = {
-    aws:AWS
+    AWS:AWS,
+    dynamodb,
+    docClient
 }
