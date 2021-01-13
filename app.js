@@ -26,10 +26,13 @@ app.use('/population', populationRouter);
 app.use('/authors', authorRouter);
 
 app.get('/', function (req, res) {
-    res.render('index', {
-        title: 'Population Chart'
-    });
+   res.send('okay')
 });
+
+app.get('/health',function(req,res){
+    res.status(200)
+    res.send('server running good')
+})
 
 
 app.listen(port, function () {
