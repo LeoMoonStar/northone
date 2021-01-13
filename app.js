@@ -26,7 +26,7 @@ app.use('/population', populationRouter);
 app.use('/authors', authorRouter);
 
 app.get('/', function (req, res) {
-   res.send('okay')
+   res.send('Here is the index page')
 });
 
 app.get('/health',function(req,res){
