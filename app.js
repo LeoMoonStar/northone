@@ -31,7 +31,7 @@ app.get('/', function (req, res) {
 
 app.get('/health',function(req,res){
     res.status(200)
-    res.send('server running good')
+    res.send('Server running good')
 })
 
 
